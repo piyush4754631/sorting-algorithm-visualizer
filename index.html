@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sorting Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Sorting Algorithm Visualizer</h1>
+
+    <div class="controls">
+
+        <select id="algorithm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+        </select>
+
+        <label>
+            Array Size
+            <input
+                type="range"
+                id="size"
+                min="10"
+                max="100"
+                value="50"
+            >
+        </label>
+
+        <label>
+            Speed
+            <input
+                type="range"
+                id="speed"
+                min="1"
+                max="100"
+                value="50"
+            >
+        </label>
+
+        <button id="generate">
+            Generate Array
+        </button>
+
+        <button id="sort">
+            Start Sorting
+        </button>
+
+        <button id="stop">
+            Stop
+        </button>
+
+    </div>
+
+    <div class="stats">
+
+        <div>
+            <p>Comparisons</p>
+            <span id="comparisons">0</span>
+        </div>
+
+        <div>
+            <p>Swaps</p>
+            <span id="swaps">0</span>
+        </div>
+
+    </div>
+
+    <div id="array"></div>
+
+    <div class="info">
+
+        <h2 id="algorithmName">
+            Bubble Sort
+        </h2>
+
+        <p id="description">
+            Bubble Sort compares adjacent elements and swaps them
+            if they are in the wrong order.
+        </p>
+
+        <div class="complexity">
+
+            <div>
+                <b>Best</b>
+                <span id="best">O(n)</span>
+            </div>
+
+            <div>
+                <b>Average</b>
+                <span id="average">O(n²)</span>
+            </div>
+
+            <div>
+                <b>Worst</b>
+                <span id="worst">O(n²)</span>
+            </div>
+
+            <div>
+                <b>Space</b>
+                <span id="space">O(1)</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

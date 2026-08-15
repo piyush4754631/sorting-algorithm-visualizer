@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+    text-align: center;
+    padding: 25px;
+    background: #1e293b;
+}
+
+
+/* =========================
+   Controls
+========================= */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 20px;
+
+    background: #111827;
+}
+
+select,
+button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+select {
+    background: #334155;
+    color: white;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#stop {
+    background: #dc2626;
+}
+
+#stop:hover {
+    background: #b91c1c;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Stats
+========================= */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    padding: 15px;
+
+    background: #1e293b;
+
+    text-align: center;
+}
+
+.stats p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.stats span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Array
+========================= */
+
+#array {
+    height: 450px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 30px 20px;
+
+    background: #020617;
+}
+
+.bar {
+    width: 10px;
+
+    background: #3b82f6;
+
+    border-radius: 3px 3px 0 0;
+}
+
+
+/* =========================
+   Algorithm Information
+========================= */
+
+.info {
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #1e293b;
+
+    border-radius: 10px;
+}
+
+.info h2 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Complexity
+========================= */
+
+.complexity {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.complexity div {
+    padding: 15px;
+
+    background: #334155;
+
+    border-radius: 8px;
+}
+
+.complexity b {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.complexity span {
+    color: #60a5fa;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+
+    .controls {
+        flex-direction: column;
+    }
+
+    #array {
+        height: 350px;
+    }
+
+    .bar {
+        width: 5px;
+    }
+
+    .complexity {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
